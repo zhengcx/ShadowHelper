@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    tools:context=".MainActivity">
+
+    <!--View颜色-->
+    <TextView
+        android:id="@+id/tv_color_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="View颜色：" />
+
+    <EditText
+        android:id="@+id/et_color"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_color_text"
+        android:layout_toRightOf="@id/tv_color_text"
+        android:hint="渐变色以英文逗号隔开"
+        android:textSize="13sp" />
+
+    <!--View圆角-->
+    <TextView
+        android:id="@+id/tv_radius_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_color_text"
+        android:layout_marginTop="20dp"
+        android:text="View圆角：" />
+
+    <EditText
+        android:id="@+id/et_radius"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_radius_text"
+        android:layout_toRightOf="@id/tv_radius_text"
+        android:hint="如：8"
+        android:textSize="13sp" />
+
+    <!--阴影颜色-->
+    <TextView
+        android:id="@+id/tv_shadowcolor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_radius_text"
+        android:layout_marginTop="20dp"
+        android:text="阴影颜色：" />
+
+    <EditText
+        android:id="@+id/et_shadowcolor"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_shadowcolor_text"
+        android:layout_toRightOf="@id/tv_shadowcolor_text"
+        android:hint="如：#99000000"
+        android:textSize="13sp" />
+
+    <!--横向偏移-->
+    <TextView
+        android:id="@+id/tv_offsetX_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_shadowcolor_text"
+        android:layout_marginTop="20dp"
+        android:text="横向偏移：" />
+
+    <EditText
+        android:id="@+id/et_offsetX"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_offsetX_text"
+        android:layout_toRightOf="@id/tv_offsetX_text"
+        android:hint="如：4"
+        android:textSize="13sp" />
+
+    <!--纵向偏移-->
+    <TextView
+        android:id="@+id/tv_offsetY_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_offsetX_text"
+        android:layout_marginTop="20dp"
+        android:text="纵向偏移：" />
+
+    <EditText
+        android:id="@+id/et_offsetY"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_offsetY_text"
+        android:layout_toRightOf="@id/tv_offsetY_text"
+        android:hint="如：3"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_offsetY_text"
+        android:layout_marginTop="15dp"
+        android:text="确定" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/btn_done"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Shadow Test"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
