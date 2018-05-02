@@ -3,7 +3,8 @@ A library to add shadows for the Android View.(一个方便为Android View添加
 
 ![demo.gif](https://github.com/zhengcx/ShadowHelper/blob/master/shadowhelper.gif)
 
-#How to use
+# How to use
+
 1.**Step 1:** Add the JitPack repository to your build file
 ```gradle
 allprojects {
@@ -21,7 +22,7 @@ dependencies {
 	}
 ```
 
-3.Use in Java code like this:
+3.**Step 3:** Use in Java code like this:
 ```java
  TextView textView1 = findViewById(R.id.tv_1);
  ShadowConfig.Builder config = new ShadowConfig.Builder()
