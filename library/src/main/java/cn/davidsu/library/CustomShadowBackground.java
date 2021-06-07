@@ -39,7 +39,7 @@ public class CustomShadowBackground extends Drawable {
     private int mOffsetY;
 
     @Nullable
-    private RectF mRectF;
+    private RectF mRectF = new RectF();
     @Nullable
     private Paint mPaint;
 
@@ -62,11 +62,9 @@ public class CustomShadowBackground extends Drawable {
 
     @Override
     public void draw(@NonNull Canvas canvas) {
-        if (mRectF == null) {
-            Rect bounds = getBounds();
-            mRectF = new RectF(bounds.left + mShadowRadius - mOffsetX, bounds.top + mShadowRadius - mOffsetY, bounds.right - mShadowRadius - mOffsetX,
-                    bounds.bottom - mShadowRadius - mOffsetY);
-        }
+        Rect bounds = getBounds();
+        mRectF.set(bounds.left + mShadowRadius - mOffsetX, bounds.top + mShadowRadius - mOffsetY, bounds.right - mShadowRadius - mOffsetX,
+                bounds.bottom - mShadowRadius - mOffsetY);
 
         if (mPaint == null) {
             initPaint();
